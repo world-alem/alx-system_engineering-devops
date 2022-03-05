@@ -1,2 +1,2 @@
 #!/bin/bash
-chown a+rwx _hellow
+chown a+rwx _hello

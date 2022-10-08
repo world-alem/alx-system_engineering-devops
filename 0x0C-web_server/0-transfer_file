@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# transfers file from client to server
 
 if [ "$4" = "" ]
 then

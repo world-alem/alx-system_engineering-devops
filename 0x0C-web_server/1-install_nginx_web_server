@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# install nginx with hello world at /
+
+sudo apt update
+sudo apt install nginx -y
+
+sudo systemctl start nginx
+
+# allow nginx on firewall
+sudo ufw allow 'Nginx HTTP'
+
+# ownership stuff
+sudo chown -R "$USER":"$USER" /var/www/html
+sudo chmod -R 755 /var/www
+
+# === hello world content ===
+sudo echo "Hello World!" > /var/www/html/inex.nginx-debian.html
+
+sudo nginx -s reload
+
